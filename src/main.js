@@ -5,7 +5,7 @@ let bodyElem = document.querySelector("body");
 
 window.addEventListener("load", () => {                     //! cuando el este cargado el contenido ejecutara la funcion
 	let randNum = Math.ceil(Math.random() * 8);               //! genera un numero aleatorio, ceil redondea para arriba, ramdon genera un numero aleatoreo entre 0 y 5 de caracter float por eso se usa ceil
-	bodyElem.style.backgroundImage = `url('../public/imgs/bg-${randNum}.jpg')`; //!modificamos el bg con el numero ramdon, es importante que los archivos tengan el mismo nombre, solo se cambiara el numero
+	bodyElem.style.backgroundImage = `url('imgs/bg-${randNum}.jpg')`; //!modificamos el bg con el numero ramdon, es importante que los archivos tengan el mismo nombre, solo se cambiara el numero
 	
 });
 
@@ -41,7 +41,7 @@ function addDataToDom(data) {
 	pokeimagen.innerHTML = `<img src="${urlImagen}" alt="" class="h-full w-full object-contain"> `;
 	pokenombre.innerHTML = `Nombre: ${data.name}`;
 	poketipo.innerHTML = `Tipo: ${tipos}`;
-	pokealtura.innerHTML = `Altura: ${(data.height / 10).toFixed(1)} kg`;
+	pokealtura.innerHTML = `Altura: ${(data.height / 10).toFixed(1)} cm`;
 	pokepeso.innerHTML = `Peso: ${(data.weight / 10).toFixed(1)} kg`;
 }
 
